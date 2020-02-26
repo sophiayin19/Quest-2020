@@ -201,29 +201,34 @@
             </objects>
             <point key="canvasLocation" x="1937" y="-193"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="1gz-Oq-61Q">
+        <!--College List-->
+        <scene sceneID="RFl-fg-xjV">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="Kwz-Fi-jX3" customClass="HomeViewController" customModule="QuestPrototype1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Sj2-ZG-3P2">
+                <tableViewController id="rKa-JH-daU" customClass="collegeTableViewController" customModule="QuestPrototype1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RBi-B4-clP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8v-5I-Qdx">
-                                <rect key="frame" x="157" y="425" width="101" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="UhU-ie-ySx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0wG-pe-5JR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ja6-GN-UAT">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ja6-GN-UAT" id="FUe-Kn-7S7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rKa-JH-daU" id="ru0-Tu-M1s"/>
+                            <outlet property="delegate" destination="rKa-JH-daU" id="wQN-Wj-Gs8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="College List" id="bhI-kv-XH2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQo-hP-4zA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2838" y="155"/>
+            <point key="canvasLocation" x="4086" y="141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="esg-6m-MJb">
@@ -242,6 +247,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRq-wo-H0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KN0-3c-Wfp">
+            <objects>
+                <navigationController storyboardIdentifier="HomeVC" automaticallyAdjustsScrollViewInsets="NO" id="obU-mx-g6T" customClass="navigationController" customModule="QuestPrototype1" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kA9-pp-S87">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.75934070350000005" green="0.72832906249999996" blue="0.96081227059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rKa-JH-daU" kind="relationship" relationship="rootViewController" id="5a6-GQ-12A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jt3-kp-kgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3125" y="141"/>
         </scene>
     </scenes>
 </document>
