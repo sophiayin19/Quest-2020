@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,10 +17,11 @@
 		79D83E082404EA6500CEAC87 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83E072404EA6500CEAC87 /* StartupViewController.swift */; };
 		79D83E0A2404EA6C00CEAC87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83E092404EA6C00CEAC87 /* LoginViewController.swift */; };
 		79D83E0C2404EA7200CEAC87 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83E0B2404EA7200CEAC87 /* SignupViewController.swift */; };
-		79D83E0E2404EAE500CEAC87 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83E0D2404EAE500CEAC87 /* HomeViewController.swift */; };
 		79D83E122404EF2900CEAC87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83E102404EF2900CEAC87 /* Constants.swift */; };
 		79D83E132404EF2900CEAC87 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83E112404EF2900CEAC87 /* Utilities.swift */; };
 		79D83E172404F34B00CEAC87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79D83E162404F34B00CEAC87 /* GoogleService-Info.plist */; };
+		79DE709A240619A000519265 /* collegeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE7099240619A000519265 /* collegeTableViewController.swift */; };
+		79DE709C24061B3200519265 /* navigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE709B24061B3200519265 /* navigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +37,11 @@
 		79D83E072404EA6500CEAC87 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		79D83E092404EA6C00CEAC87 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		79D83E0B2404EA7200CEAC87 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		79D83E0D2404EAE500CEAC87 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		79D83E102404EF2900CEAC87 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		79D83E112404EF2900CEAC87 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		79D83E162404F34B00CEAC87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79DE7099240619A000519265 /* collegeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collegeTableViewController.swift; sourceTree = "<group>"; };
+		79DE709B24061B3200519265 /* navigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationController.swift; sourceTree = "<group>"; };
 		96C36E7FB557436156EDE001 /* Pods-QuestPrototype1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPrototype1.debug.xcconfig"; path = "Target Support Files/Pods-QuestPrototype1/Pods-QuestPrototype1.debug.xcconfig"; sourceTree = "<group>"; };
 		C7B987225D77759742284751 /* Pods_QuestPrototype1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPrototype1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,7 +99,8 @@
 				79D83E072404EA6500CEAC87 /* StartupViewController.swift */,
 				79D83E092404EA6C00CEAC87 /* LoginViewController.swift */,
 				79D83E0B2404EA7200CEAC87 /* SignupViewController.swift */,
-				79D83E0D2404EAE500CEAC87 /* HomeViewController.swift */,
+				79DE7099240619A000519265 /* collegeTableViewController.swift */,
+				79DE709B24061B3200519265 /* navigationController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -125,7 +128,6 @@
 				96C36E7FB557436156EDE001 /* Pods-QuestPrototype1.debug.xcconfig */,
 				17F636CAD4A7C16947D68754 /* Pods-QuestPrototype1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -247,10 +249,11 @@
 			files = (
 				79D83E0C2404EA7200CEAC87 /* SignupViewController.swift in Sources */,
 				79D83E082404EA6500CEAC87 /* StartupViewController.swift in Sources */,
+				79DE709A240619A000519265 /* collegeTableViewController.swift in Sources */,
+				79DE709C24061B3200519265 /* navigationController.swift in Sources */,
 				79D83DF72404EA4100CEAC87 /* ViewController.swift in Sources */,
 				79D83DF32404EA4100CEAC87 /* AppDelegate.swift in Sources */,
 				79D83E0A2404EA6C00CEAC87 /* LoginViewController.swift in Sources */,
-				79D83E0E2404EAE500CEAC87 /* HomeViewController.swift in Sources */,
 				79D83E132404EF2900CEAC87 /* Utilities.swift in Sources */,
 				79D83DF52404EA4100CEAC87 /* SceneDelegate.swift in Sources */,
 				79D83E122404EF2900CEAC87 /* Constants.swift in Sources */,
