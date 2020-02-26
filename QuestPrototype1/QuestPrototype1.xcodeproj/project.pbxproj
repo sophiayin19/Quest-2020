@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		49A2B31A3570977C50D765E4 /* Pods_QuestPrototype1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B987225D77759742284751 /* Pods_QuestPrototype1.framework */; };
+		795C0F92240625D100D26801 /* AddCollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C0F90240625D100D26801 /* AddCollegeViewController.swift */; };
+		795C0F93240625D100D26801 /* CollegeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C0F91240625D100D26801 /* CollegeTableViewController.swift */; };
+		795C0F982406267D00D26801 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C0F952406267C00D26801 /* CoreDataStack.swift */; };
+		795C0F992406267D00D26801 /* College.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 795C0F962406267C00D26801 /* College.xcdatamodeld */; };
 		79D83DF32404EA4100CEAC87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83DF22404EA4100CEAC87 /* AppDelegate.swift */; };
 		79D83DF52404EA4100CEAC87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83DF42404EA4100CEAC87 /* SceneDelegate.swift */; };
 		79D83DF72404EA4100CEAC87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83DF62404EA4100CEAC87 /* ViewController.swift */; };
@@ -20,12 +24,15 @@
 		79D83E122404EF2900CEAC87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83E102404EF2900CEAC87 /* Constants.swift */; };
 		79D83E132404EF2900CEAC87 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83E112404EF2900CEAC87 /* Utilities.swift */; };
 		79D83E172404F34B00CEAC87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79D83E162404F34B00CEAC87 /* GoogleService-Info.plist */; };
-		79DE709A240619A000519265 /* collegeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE7099240619A000519265 /* collegeTableViewController.swift */; };
 		79DE709C24061B3200519265 /* navigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE709B24061B3200519265 /* navigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17F636CAD4A7C16947D68754 /* Pods-QuestPrototype1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPrototype1.release.xcconfig"; path = "Target Support Files/Pods-QuestPrototype1/Pods-QuestPrototype1.release.xcconfig"; sourceTree = "<group>"; };
+		795C0F90240625D100D26801 /* AddCollegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddCollegeViewController.swift; path = /Users/sopyin/Desktop/Closet/questRepo/QuestPrototype1/QuestPrototype1/VCs/AddCollegeViewController.swift; sourceTree = "<absolute>"; };
+		795C0F91240625D100D26801 /* CollegeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollegeTableViewController.swift; path = ../TodoAppPrototype/TodoAppPrototype/VC/CollegeTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		795C0F952406267C00D26801 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		795C0F972406267C00D26801 /* Colleges.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Colleges.xcdatamodel; sourceTree = "<group>"; };
 		79D83DEF2404EA4100CEAC87 /* QuestPrototype1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestPrototype1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D83DF22404EA4100CEAC87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D83DF42404EA4100CEAC87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +47,6 @@
 		79D83E102404EF2900CEAC87 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		79D83E112404EF2900CEAC87 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		79D83E162404F34B00CEAC87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		79DE7099240619A000519265 /* collegeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collegeTableViewController.swift; sourceTree = "<group>"; };
 		79DE709B24061B3200519265 /* navigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationController.swift; sourceTree = "<group>"; };
 		96C36E7FB557436156EDE001 /* Pods-QuestPrototype1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPrototype1.debug.xcconfig"; path = "Target Support Files/Pods-QuestPrototype1/Pods-QuestPrototype1.debug.xcconfig"; sourceTree = "<group>"; };
 		C7B987225D77759742284751 /* Pods_QuestPrototype1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPrototype1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		795C0F942406267C00D26801 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				795C0F952406267C00D26801 /* CoreDataStack.swift */,
+				795C0F962406267C00D26801 /* College.xcdatamodeld */,
+			);
+			name = "Core Data";
+			path = "../../TodoAppPrototype/TodoAppPrototype/Core Data";
+			sourceTree = "<group>";
+		};
 		79D83DE62404EA4100CEAC87 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +95,7 @@
 		79D83DF12404EA4100CEAC87 /* QuestPrototype1 */ = {
 			isa = PBXGroup;
 			children = (
+				795C0F942406267C00D26801 /* Core Data */,
 				79D83E0F2404EF2900CEAC87 /* Helpers */,
 				79D83E062404EA5200CEAC87 /* VCs */,
 				79D83DF22404EA4100CEAC87 /* AppDelegate.swift */,
@@ -99,8 +116,9 @@
 				79D83E072404EA6500CEAC87 /* StartupViewController.swift */,
 				79D83E092404EA6C00CEAC87 /* LoginViewController.swift */,
 				79D83E0B2404EA7200CEAC87 /* SignupViewController.swift */,
-				79DE7099240619A000519265 /* collegeTableViewController.swift */,
 				79DE709B24061B3200519265 /* navigationController.swift */,
+				795C0F90240625D100D26801 /* AddCollegeViewController.swift */,
+				795C0F91240625D100D26801 /* CollegeTableViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -248,13 +266,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D83E0C2404EA7200CEAC87 /* SignupViewController.swift in Sources */,
+				795C0F93240625D100D26801 /* CollegeTableViewController.swift in Sources */,
 				79D83E082404EA6500CEAC87 /* StartupViewController.swift in Sources */,
-				79DE709A240619A000519265 /* collegeTableViewController.swift in Sources */,
+				795C0F982406267D00D26801 /* CoreDataStack.swift in Sources */,
 				79DE709C24061B3200519265 /* navigationController.swift in Sources */,
 				79D83DF72404EA4100CEAC87 /* ViewController.swift in Sources */,
+				795C0F92240625D100D26801 /* AddCollegeViewController.swift in Sources */,
 				79D83DF32404EA4100CEAC87 /* AppDelegate.swift in Sources */,
 				79D83E0A2404EA6C00CEAC87 /* LoginViewController.swift in Sources */,
 				79D83E132404EF2900CEAC87 /* Utilities.swift in Sources */,
+				795C0F992406267D00D26801 /* College.xcdatamodeld in Sources */,
 				79D83DF52404EA4100CEAC87 /* SceneDelegate.swift in Sources */,
 				79D83E122404EF2900CEAC87 /* Constants.swift in Sources */,
 			);
@@ -454,6 +475,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		795C0F962406267C00D26801 /* College.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				795C0F972406267C00D26801 /* Colleges.xcdatamodel */,
+			);
+			currentVersion = 795C0F972406267C00D26801 /* Colleges.xcdatamodel */;
+			path = College.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 79D83DE72404EA4100CEAC87 /* Project object */;
 }

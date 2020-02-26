@@ -10,12 +10,12 @@
 		7910B18823FF4FD800610FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7910B18723FF4FD800610FE1 /* Assets.xcassets */; };
 		7910B18C23FF509500610FE1 /* College.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7910B18A23FF509500610FE1 /* College.xcdatamodeld */; };
 		7910B18E23FF51AE00610FE1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910B18D23FF51AE00610FE1 /* CoreDataStack.swift */; };
+		795C0F9B240627E700D26801 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C0F9A240627E700D26801 /* AddViewController.swift */; };
 		7971F04323FF253A00C54F53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971F04223FF253A00C54F53 /* AppDelegate.swift */; };
 		7971F04523FF253A00C54F53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971F04423FF253A00C54F53 /* SceneDelegate.swift */; };
 		7971F04723FF253A00C54F53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971F04623FF253A00C54F53 /* ViewController.swift */; };
 		7971F04A23FF253A00C54F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7971F04823FF253A00C54F53 /* Main.storyboard */; };
 		7971F04F23FF253D00C54F53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7971F04D23FF253D00C54F53 /* LaunchScreen.storyboard */; };
-		7971F05823FF329F00C54F53 /* AddCollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971F05723FF329F00C54F53 /* AddCollegeViewController.swift */; };
 		7971F05A23FF32B700C54F53 /* CollegeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971F05923FF32B700C54F53 /* CollegeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +23,7 @@
 		7910B18723FF4FD800610FE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7910B18B23FF509500610FE1 /* Colleges.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Colleges.xcdatamodel; sourceTree = "<group>"; };
 		7910B18D23FF51AE00610FE1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		795C0F9A240627E700D26801 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		7971F03F23FF253A00C54F53 /* TodoAppPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAppPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7971F04223FF253A00C54F53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7971F04423FF253A00C54F53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		7971F04923FF253A00C54F53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7971F04E23FF253D00C54F53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7971F05023FF253D00C54F53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7971F05723FF329F00C54F53 /* AddCollegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollegeViewController.swift; sourceTree = "<group>"; };
 		7971F05923FF32B700C54F53 /* CollegeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,8 +89,8 @@
 		7971F05623FF327300C54F53 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				7971F05723FF329F00C54F53 /* AddCollegeViewController.swift */,
 				7971F05923FF32B700C54F53 /* CollegeTableViewController.swift */,
+				795C0F9A240627E700D26801 /* AddViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 			files = (
 				7910B18E23FF51AE00610FE1 /* CoreDataStack.swift in Sources */,
 				7971F05A23FF32B700C54F53 /* CollegeTableViewController.swift in Sources */,
-				7971F05823FF329F00C54F53 /* AddCollegeViewController.swift in Sources */,
+				795C0F9B240627E700D26801 /* AddViewController.swift in Sources */,
 				7971F04723FF253A00C54F53 /* ViewController.swift in Sources */,
 				7971F04323FF253A00C54F53 /* AppDelegate.swift in Sources */,
 				7971F04523FF253A00C54F53 /* SceneDelegate.swift in Sources */,
