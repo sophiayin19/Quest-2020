@@ -10,7 +10,11 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+   
+    
+   
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -19,13 +23,40 @@ class SignupViewController: UIViewController {
        
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    @IBOutlet weak var yearOfGradPicker: UIPickerView!
+    
+    var yearOfGrad = "2020"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        yearOfGradPicker.delegate = self
+        yearOfGradPicker.dataSource = self
         // Do any additional setup after loading the view.
         setUpElements()
     
     }
+    let listofyears = ["2020","2021","2022","2023","2024" ]
+    //MARK: Actions
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+               return 1
+           
+       }
+       
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+               return  listofyears.count
+
+       }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let chosenYear = listofyears[row]
+        return chosenYear
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+          yearOfGrad = listofyears[row]
+    }
+    
+
+
    func setUpElements(){
           errorLabel.alpha = 0
           Utilities.styleTextField(passwordTextField)
@@ -33,6 +64,7 @@ class SignupViewController: UIViewController {
           Utilities.styleTextField(firstNameTextField)
           Utilities.styleTextField(lastNameTextField)
         Utilities.styleFilledButton(signupButton)
+    Utilities.styleTextField(phoneNumberTextField)
     
     
       }
@@ -66,13 +98,15 @@ class SignupViewController: UIViewController {
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let phoneNumber = phoneNumberTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 if err != nil {
                     //there was an error
                     self.showError("Error creating User")
                 }else{
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstName": firstName, "lastName":lastName, "uid": result!.user.uid]) { (error) in
+                    db.collection("users").addDocument(data: ["firstName": firstName, "lastName":lastName, "uid": result!.user.uid, "phoneNumber":phoneNumber, "yearOfGrad":self.yearOfGrad]) { (error) in
                         if error != nil {
                             self.showError("Error saving user data")
                         }

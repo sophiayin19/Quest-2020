@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MK6-VP-yaQ">
-                                <rect key="frame" x="40" y="188" width="334" height="370.5"/>
+                                <rect key="frame" x="40" y="128" width="334" height="676.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KiF-gf-ANd">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -154,8 +154,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBb-X9-4Rw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coN-B2-IgO">
                                         <rect key="frame" x="0.0" y="280" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipr-Rq-Zg7">
+                                        <rect key="frame" x="0.0" y="350" width="334" height="216"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBb-X9-4Rw">
+                                        <rect key="frame" x="0.0" y="586" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="LGa-Hq-C8R"/>
                                         </constraints>
@@ -165,7 +173,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK6-of-CZj">
-                                        <rect key="frame" x="0.0" y="350" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="656" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -176,14 +184,15 @@
                                     <constraint firstItem="qqu-fS-S2x" firstAttribute="height" secondItem="KiF-gf-ANd" secondAttribute="height" id="2Ft-it-ad2"/>
                                     <constraint firstItem="5Bd-xA-6Wv" firstAttribute="height" secondItem="KiF-gf-ANd" secondAttribute="height" id="fNi-ZW-mRA"/>
                                     <constraint firstItem="KKH-jv-Yn2" firstAttribute="height" secondItem="KiF-gf-ANd" secondAttribute="height" id="nfR-rb-ZRm"/>
+                                    <constraint firstItem="DBb-X9-4Rw" firstAttribute="height" secondItem="coN-B2-IgO" secondAttribute="height" id="vgg-AU-Ve6"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xst-9d-Ymy" firstAttribute="trailing" secondItem="MK6-VP-yaQ" secondAttribute="trailing" constant="40" id="DRM-Od-WbE"/>
                             <constraint firstItem="MK6-VP-yaQ" firstAttribute="leading" secondItem="xst-9d-Ymy" secondAttribute="leading" constant="40" id="QvS-ZX-ZoT"/>
-                            <constraint firstItem="MK6-VP-yaQ" firstAttribute="top" secondItem="xst-9d-Ymy" secondAttribute="top" constant="100" id="Unx-dL-XS8"/>
+                            <constraint firstItem="MK6-VP-yaQ" firstAttribute="top" secondItem="xst-9d-Ymy" secondAttribute="top" constant="40" id="Unx-dL-XS8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xst-9d-Ymy"/>
                     </view>
@@ -194,41 +203,14 @@
                         <outlet property="firstNameTextField" destination="KiF-gf-ANd" id="fBP-v1-zg8"/>
                         <outlet property="lastNameTextField" destination="5Bd-xA-6Wv" id="JQh-1G-vvX"/>
                         <outlet property="passwordTextField" destination="KKH-jv-Yn2" id="xZH-3R-3ft"/>
+                        <outlet property="phoneNumberTextField" destination="coN-B2-IgO" id="sSu-vi-nS6"/>
                         <outlet property="signupButton" destination="DBb-X9-4Rw" id="etL-uN-9lc"/>
+                        <outlet property="yearOfGradPicker" destination="ipr-Rq-Zg7" id="MOG-wQ-vYU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cik-Qs-ItP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1937" y="-193"/>
-        </scene>
-        <!--College List-->
-        <scene sceneID="RFl-fg-xjV">
-            <objects>
-                <tableViewController id="rKa-JH-daU" customClass="collegeTableViewController" customModule="QuestPrototype1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RBi-B4-clP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ja6-GN-UAT">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ja6-GN-UAT" id="FUe-Kn-7S7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="rKa-JH-daU" id="ru0-Tu-M1s"/>
-                            <outlet property="delegate" destination="rKa-JH-daU" id="wQN-Wj-Gs8"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="College List" id="bhI-kv-XH2"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NQo-hP-4zA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4086" y="141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="esg-6m-MJb">
@@ -238,6 +220,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kai-LW-ozb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -248,24 +233,185 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="KN0-3c-Wfp">
+        <!--All Schools-->
+        <scene sceneID="MsR-5u-PZj">
             <objects>
-                <navigationController storyboardIdentifier="HomeVC" automaticallyAdjustsScrollViewInsets="NO" id="obU-mx-g6T" customClass="navigationController" customModule="QuestPrototype1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mhI-9q-yoS" customClass="CollegeTableViewController" customModule="QuestPrototype1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="skf-ml-uuY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchoolCell" textLabel="SWb-Vu-fz8" style="IBUITableViewCellStyleDefault" id="9Na-oy-4XH">
+                                <rect key="frame" x="0.0" y="28" width="414" height="62.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Na-oy-4XH" id="HkS-jW-njz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="62.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SWb-Vu-fz8">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="62.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mhI-9q-yoS" id="d8N-l0-MWd"/>
+                            <outlet property="delegate" destination="mhI-9q-yoS" id="BOj-0R-M65"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Schools" id="Y0F-M4-iAA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aLm-o4-J4N">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="UTP-QI-tJp" kind="presentation" identifier="showAddCollege" id="0c3-Bd-41j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCY-K9-ZEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3768" y="35"/>
+        </scene>
+        <!--Add College View Controller-->
+        <scene sceneID="nas-da-evo">
+            <objects>
+                <viewController id="UTP-QI-tJp" customClass="AddCollegeViewController" customModule="QuestPrototype1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WhS-sn-eBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zys-vK-Ttr">
+                                <rect key="frame" x="16" y="20" width="382" height="421"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which School Would You Like To Add?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8p-wd-qt1">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="wjq-So-qtZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOR-lv-U2d">
+                                        <rect key="frame" x="0.0" y="45" width="382" height="27.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView tag="2" contentMode="scaleToFill" verticalHuggingPriority="245" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-tL-8jR">
+                                        <rect key="frame" x="0.0" y="92.5" width="382" height="328.5"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="UTP-QI-tJp" id="MoF-7h-gXj"/>
+                                            <outlet property="delegate" destination="UTP-QI-tJp" id="HlX-Tp-PcL"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NI8-Pm-JDr">
+                                <rect key="frame" x="36" y="694" width="342" height="114"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NCf-eA-dn9">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="32"/>
+                                        <segments>
+                                            <segment title="Reach"/>
+                                            <segment title="Goal"/>
+                                            <segment title="Safety"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BDn-wd-ydP">
+                                        <rect key="frame" x="0.0" y="39" width="342" height="32"/>
+                                        <segments>
+                                            <segment title="ED"/>
+                                            <segment title="EA"/>
+                                            <segment title="Regular"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-XU-OyJ">
+                                        <rect key="frame" x="0.0" y="78" width="342" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr4-91-hGw">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="36"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="vFz-mu-pkR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelTapped:" destination="UTP-QI-tJp" eventType="touchUpInside" id="UtV-13-Ldq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frX-PB-0Kq">
+                                                <rect key="frame" x="83" y="0.0" width="259" height="36"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="doneTapped:" destination="UTP-QI-tJp" eventType="touchUpInside" id="uEl-vG-RLH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60534927810650441" green="0.78392572441983266" blue="0.88129452720207258" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NI8-Pm-JDr" firstAttribute="bottom" secondItem="WhS-sn-eBJ" secondAttribute="bottomMargin" id="3Y8-zo-JQN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NI8-Pm-JDr" secondAttribute="trailing" constant="16" id="UIE-9f-y38"/>
+                            <constraint firstItem="ITV-vT-Azs" firstAttribute="trailing" secondItem="zys-vK-Ttr" secondAttribute="trailing" constant="16" id="fSa-dN-a9O"/>
+                            <constraint firstItem="zys-vK-Ttr" firstAttribute="leading" secondItem="ITV-vT-Azs" secondAttribute="leading" constant="16" id="hyg-0a-OCI"/>
+                            <constraint firstItem="zys-vK-Ttr" firstAttribute="top" secondItem="ITV-vT-Azs" secondAttribute="top" constant="20" id="ifM-ML-K0D"/>
+                            <constraint firstItem="zys-vK-Ttr" firstAttribute="height" secondItem="WhS-sn-eBJ" secondAttribute="height" multiplier="0.5" id="qny-F3-7j6"/>
+                            <constraint firstItem="NI8-Pm-JDr" firstAttribute="leading" secondItem="WhS-sn-eBJ" secondAttribute="leadingMargin" constant="16" id="sc4-Yw-n9Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ITV-vT-Azs"/>
+                    </view>
+                    <connections>
+                        <outlet property="chancesSegmentedController" destination="NCf-eA-dn9" id="og7-wh-T3O"/>
+                        <outlet property="collegeListPickerView" destination="eUy-tL-8jR" id="uQJ-X9-bwf"/>
+                        <outlet property="doneButton" destination="frX-PB-0Kq" id="DJn-MO-jgF"/>
+                        <outlet property="label" destination="cOR-lv-U2d" id="KI3-MN-Mr2"/>
+                        <outlet property="timingSegmentedController" destination="BDn-wd-ydP" id="qPk-xj-VV0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4N-Kn-Siu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4575" y="35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1S8-ew-WiK">
+            <objects>
+                <navigationController storyboardIdentifier="HomeVC" automaticallyAdjustsScrollViewInsets="NO" id="MDA-CR-fgr" customClass="navigationController" customModule="QuestPrototype1" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kA9-pp-S87">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="I0h-NM-7NO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.75934070350000005" green="0.72832906249999996" blue="0.96081227059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.76073463860000001" green="0.73101128140000005" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rKa-JH-daU" kind="relationship" relationship="rootViewController" id="5a6-GQ-12A"/>
+                        <segue destination="mhI-9q-yoS" kind="relationship" relationship="rootViewController" id="L4A-ng-I69"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jt3-kp-kgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1c-6M-yBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3125" y="141"/>
+            <point key="canvasLocation" x="2941" y="35"/>
         </scene>
     </scenes>
 </document>

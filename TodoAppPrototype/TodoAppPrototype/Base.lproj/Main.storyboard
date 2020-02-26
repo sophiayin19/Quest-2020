@@ -55,7 +55,7 @@
         <!--Add College View Controller-->
         <scene sceneID="nas-da-evo">
             <objects>
-                <viewController id="UTP-QI-tJp" customClass="AddCollegeViewController" customModule="TodoAppPrototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UTP-QI-tJp" customClass="AddCollegeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WhS-sn-eBJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
