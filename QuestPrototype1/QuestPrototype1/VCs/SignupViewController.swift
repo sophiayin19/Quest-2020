@@ -27,7 +27,14 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @IBOutlet weak var yearOfGradPicker: UIPickerView!
     
-    var yearOfGrad = "2020"
+
+    struct GlobalVariable{
+        static var yearOfGrad = "2020"
+        static var uid = "x"
+
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         yearOfGradPicker.delegate = self
@@ -52,7 +59,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         return chosenYear
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-          yearOfGrad = listofyears[row]
+        GlobalVariable.yearOfGrad = listofyears[row]
     }
     
 
@@ -105,8 +112,9 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                     //there was an error
                     self.showError("Error creating User")
                 }else{
+                    GlobalVariable.uid = result!.user.uid
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstName": firstName, "lastName":lastName, "uid": result!.user.uid, "phoneNumber":phoneNumber, "yearOfGrad":self.yearOfGrad]) { (error) in
+                db.collection("users").document(GlobalVariable.uid).setData(["firstName": firstName, "lastName":lastName, "uid": GlobalVariable.uid, "phoneNumber":phoneNumber, "yearOfGrad":GlobalVariable.yearOfGrad]) { (error) in
                         if error != nil {
                             self.showError("Error saving user data")
                         }
@@ -128,12 +136,14 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         
     }
+
     func transitionToHome(){
        let homeViewController = storyboard?.instantiateViewController(identifier:Constants.Storyboard.homeViewController) as? navigationController
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
         
     }
+    
     /*
     // MARK: - Navigation
 

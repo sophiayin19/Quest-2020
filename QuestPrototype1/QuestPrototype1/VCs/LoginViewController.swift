@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 
 
 class LoginViewController: UIViewController {
@@ -41,6 +42,15 @@ class LoginViewController: UIViewController {
                 self.showError(err!.localizedDescription)
                          }
             else{
+                let user = Auth.auth().currentUser;
+
+                if ((user) != nil) {
+                    SignupViewController.GlobalVariable.uid = user!.uid
+                  // User is signed in.
+                } else {
+                  // No user is signed in.
+                    print("error")
+                }
                 self.transitionToHome()
             }
             
