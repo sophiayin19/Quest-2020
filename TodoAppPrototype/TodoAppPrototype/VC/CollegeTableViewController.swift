@@ -28,6 +28,7 @@ class CollegeTableViewController: UITableViewController {
             managedObjectContext: coreDataStack.managedContext,
             sectionNameKeyPath: nil,
             cacheName: nil)
+        
         resultsController.delegate = self
         // Fetch
         do{
